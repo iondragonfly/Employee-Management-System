@@ -12,6 +12,10 @@ public class UpdateEmployee {
         // return success or error message
     }
 
+    public void addEmployeeScreen() {
+
+    }
+
     public StringBuilder addEmployee(Employee employee, Connection myConn) {
         // add code for adding new employee to database
         // empID should auto-increment so empID should not be set

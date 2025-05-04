@@ -23,11 +23,13 @@ public class EmployeeManagementSystem {
                 int empID = myRS1.getInt("empid");
                 if (password.equals(userPassword)) {
                     if (isAdmin) {
+                        System.out.println("check");
                         Administrator user = new Administrator();
                         user.empID = empID;
                         user.setEmployeeValues();
                         user.mainMenu();
                     } else {
+                        System.out.println("check2");
                         GeneralEmployee user = new GeneralEmployee();
                         user.empID = empID;
                         user.setEmployeeValues();

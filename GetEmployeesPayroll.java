@@ -4,7 +4,12 @@ import java.sql.DriverManager;
 import java.sql.Connection;
 
 public class GetEmployeesPayroll {
-    public static void main(String[] args) {
+
+    public GetEmployeesPayroll() {
+
+    }
+
+    public static void fullPayHistoryByEmployee(String[] args) {
         String url = "jdbc:mysql://localhost:3306/employeedata";
         String user = "root";
         String password = "Iondragonfly23!";
