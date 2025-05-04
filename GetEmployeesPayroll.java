@@ -5,7 +5,7 @@ import java.sql.Connection;
 
 public class GetEmployeesPayroll {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306";
+        String url = "jdbc:mysql://localhost:3306/employeedata";
         String user = "root";
         String password = "Iondragonfly23!";
         StringBuilder output = new StringBuilder("");

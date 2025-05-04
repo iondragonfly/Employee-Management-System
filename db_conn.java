@@ -8,17 +8,17 @@ public class db_conn {
     String url;
     String user;
     String password;
-    Connection myConn;
+    Connection connection;
     String error;
 
     public db_conn() {
-        url = "jdbc:mysql://localhost:3306";
-        user = "root";
-        password = "Iondragonfly23!";
+        this.url = "jdbc:mysql://localhost:3306/employeedata";
+        this.user = "root";
+        this.password = "Iondragonfly23!";
         try {
-            myConn = DriverManager.getConnection(url, user, password);
+            this.connection = DriverManager.getConnection(this.url, this.user, this.password);
         } catch (Exception e) {
-            error = ("ERROR " + e.getLocalizedMessage());
+            this.error = ("ERROR " + e.getLocalizedMessage());
         } finally {
         }
     }
