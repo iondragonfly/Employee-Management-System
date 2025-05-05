@@ -14,7 +14,7 @@ public abstract class Employee {
     Date hireDate;
     String ssn;
     int phoneNumber;
-    int empDivision;
+    Department department;
     JobTitle jobTitle;
     Boolean isAdmin;
     db_conn dbConnection = new db_conn();
@@ -119,7 +119,7 @@ public abstract class Employee {
                     "\t4. Add Employee\n" +
                     "\t5. Exit\n");
             Scanner input = new Scanner(System.in);
-            int option = input.nextInt();
+            int option = Integer.parseInt(input.nextLine());
             while (option != 5) {
 
                 if (option == 1) {
@@ -131,7 +131,7 @@ public abstract class Employee {
                     this.searchEmployeeOptions();
                 } else if (option == 4) {
                     UpdateEmployee updater = new UpdateEmployee();
-                    updater.addEmployeeScreen();
+                    updater.addEmployeeScreen(input, dbConnection.connection);
                 } else {
                     System.out.println("Invalid Selection: Please enter the number for your choice.");
                 }
@@ -142,7 +142,7 @@ public abstract class Employee {
                         "\t\t3. Search Employee" +
                         "\t\t4. Add Employee" +
                         "\t\t5. Exit\n");
-                option = input.nextInt();
+                option = Integer.parseInt(input.nextLine());
 
             }
         } else {

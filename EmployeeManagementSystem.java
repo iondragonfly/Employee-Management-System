@@ -13,7 +13,7 @@ public class EmployeeManagementSystem {
         try {
             db_conn myConn = new db_conn();
             String sqlcommand1 = "SELECT empid, username, dob, email, HireDate, Salary, password, isAdmin "
-                    + "FROM employees " +
+                    + " FROM employees " +
                     "WHERE username = '" + username + "';";
             Statement myStmt = myConn.connection.createStatement();
             ResultSet myRS1 = myStmt.executeQuery(sqlcommand1);
